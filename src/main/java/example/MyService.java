@@ -5,14 +5,14 @@ import javax.inject.Inject;
 
 public class MyService {
 
-  private final Hello1 hello1;
+  private final MyHello1 hello1;
+
+  private final MyHello2 myHello2;
 
   @Inject
-  private MyHello2 myHello2;
-
-  @Inject
-  public MyService(Hello1 hello1) {
+  public MyService(MyHello1 hello1, MyHello2 hello2) {
     this.hello1 = hello1;
+    this.myHello2 = hello2;
   }
 
   public String sayHello(String user) {
